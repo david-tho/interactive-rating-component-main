@@ -8,8 +8,9 @@ rateNumber.innerHTML = 0;
 
 const handleClick = function (e) {
   rateBtn.forEach((val) => {
+    val.classList.remove("active");
     if (e.target.innerHTML === val.innerHTML) {
-      val.classList.toggle("active");
+      val.classList.add("active");
     }
   });
   rateNumber.innerHTML = e.target.innerHTML;
